@@ -1,0 +1,751 @@
+{
+  "@@locale": "en",
+  "appName": "ServiceHUB",
+  "@appName": {
+    "description": "Application name shown in the app bar and splash screen"
+  },
+  "landingHeadline": "Find trusted artisans for your service needs",
+  "@landingHeadline": {
+    "description": "Main headline on the public landing page"
+  },
+  "landingTagline": "Verified. Secure. Local.",
+  "@landingTagline": {
+    "description": "Three-word trust tagline under the headline"
+  },
+  "landingCtaPrimary": "Find a Service",
+  "@landingCtaPrimary": {
+    "description": "Primary call-to-action on the landing page"
+  },
+  "landingCtaSecondary": "Browse Artisans",
+  "@landingCtaSecondary": {
+    "description": "Secondary call-to-action on the landing page"
+  },
+  "landingLoginLink": "Already have an account? Login",
+  "@landingLoginLink": {
+    "description": "Login link on the landing page"
+  },
+  "landingRegisterLink": "New here? Register",
+  "@landingRegisterLink": {
+    "description": "Register link on the landing page"
+  },
+  "landingAuthPrefixLogin": "Already have an account? ",
+  "@landingAuthPrefixLogin": {
+    "description": "Prefix text before the Login link on the landing page"
+  },
+  "landingAuthActionLogin": "Login",
+  "@landingAuthActionLogin": {
+    "description": "Login link label on the landing page"
+  },
+  "landingAuthPrefixRegister": "New here? ",
+  "@landingAuthPrefixRegister": {
+    "description": "Prefix text before the Register link on the landing page"
+  },
+  "landingAuthActionRegister": "Register",
+  "@landingAuthActionRegister": {
+    "description": "Register link label on the landing page"
+  },
+  "landingTrustTitle": "Trusted • Secure • Local",
+  "@landingTrustTitle": {
+    "description": "Trust block section title"
+  },
+  "landingTrustVerified": "Verified artisans",
+  "@landingTrustVerified": {
+    "description": "First trust point on the landing page"
+  },
+  "landingTrustPayments": "Protected payments",
+  "@landingTrustPayments": {
+    "description": "Second trust point on the landing page"
+  },
+  "landingTrustLocal": "Local service professionals",
+  "@landingTrustLocal": {
+    "description": "Third trust point on the landing page"
+  },
+  "landingSampleCta": "View a sample artisan",
+  "@landingSampleCta": {
+    "description": "Sample artisan preview link"
+  },
+  "servicesTitle": "Services",
+  "@servicesTitle": {
+    "description": "App bar title on the service categories screen"
+  },
+  "servicesHeading": "What do you need help with?",
+  "@servicesHeading": {
+    "description": "Main heading on the service categories screen"
+  },
+  "servicesSubheading": "Choose a service to get started",
+  "@servicesSubheading": {
+    "description": "Subheading on the service categories screen"
+  },
+  "servicesBookNow": "Book Now",
+  "@servicesBookNow": {
+    "description": "Primary action button on the service categories screen"
+  },
+  "categoryPlumbing": "Plumbing",
+  "@categoryPlumbing": {
+    "description": "Plumbing category name"
+  },
+  "categoryPlumbingDesc": "Leaks, pipes, installations",
+  "@categoryPlumbingDesc": {
+    "description": "Plumbing category description"
+  },
+  "categoryElectrical": "Electrical",
+  "@categoryElectrical": {
+    "description": "Electrical category name"
+  },
+  "categoryElectricalDesc": "Wiring, sockets, repairs",
+  "@categoryElectricalDesc": {
+    "description": "Electrical category description"
+  },
+  "categoryCarpentry": "Carpentry",
+  "@categoryCarpentry": {
+    "description": "Carpentry category name"
+  },
+  "categoryCarpentryDesc": "Furniture, doors, shelves",
+  "@categoryCarpentryDesc": {
+    "description": "Carpentry category description"
+  },
+  "categoryPainting": "Painting",
+  "@categoryPainting": {
+    "description": "Painting category name"
+  },
+  "categoryPaintingDesc": "Interior, exterior, touch-ups",
+  "@categoryPaintingDesc": {
+    "description": "Painting category description"
+  },
+  "categoryMasonry": "Masonry",
+  "@categoryMasonry": {
+    "description": "Masonry category name"
+  },
+  "categoryMasonryDesc": "Walls, tiles, concrete",
+  "@categoryMasonryDesc": {
+    "description": "Masonry category description"
+  },
+  "categoryMechanics": "Mechanics",
+  "@categoryMechanics": {
+    "description": "Mechanics category name"
+  },
+  "categoryMechanicsDesc": "Vehicle and equipment repair",
+  "@categoryMechanicsDesc": {
+    "description": "Mechanics category description"
+  },
+  "loginPromptTitle": "Log in to continue",
+  "@loginPromptTitle": {
+    "description": "Title on the login prompt bottom sheet"
+  },
+  "loginPromptBody": "You need an account to create a service request.",
+  "@loginPromptBody": {
+    "description": "Body text on the login prompt bottom sheet"
+  },
+  "loginPromptLogin": "Log In",
+  "@loginPromptLogin": {
+    "description": "Log in button on the login prompt bottom sheet"
+  },
+  "loginPromptRegister": "Create an Account",
+  "@loginPromptRegister": {
+    "description": "Create account button on the login prompt bottom sheet"
+  },
+  "loginPromptContinueBrowsing": "Continue browsing",
+  "@loginPromptContinueBrowsing": {
+    "description": "Continue browsing link on the login prompt bottom sheet"
+  },
+  "createRequestTitle": "Create Request",
+  "@createRequestTitle": {
+    "description": "App bar title for the create request wizard"
+  },
+  "createRequestStepLabel": "Step {current} of {total}",
+  "@createRequestStepLabel": {
+    "description": "Progress step caption in the wizard",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "createRequestContinue": "Continue",
+  "@createRequestContinue": {
+    "description": "Continue button on wizard steps"
+  },
+  "createRequestSubmit": "Submit Request",
+  "@createRequestSubmit": {
+    "description": "Submit button on the final wizard step"
+  },
+  "createRequestStep1Heading": "Describe what you need done",
+  "@createRequestStep1Heading": {
+    "description": "Heading on wizard step 1"
+  },
+  "createRequestStep1DescriptionHint": "Tell us about the job. Include details like what's broken, where it is, and any other context.",
+  "@createRequestStep1DescriptionHint": {
+    "description": "Placeholder for the description field on wizard step 1"
+  },
+  "createRequestStep1PhotoLabel": "Add photos (optional)",
+  "@createRequestStep1PhotoLabel": {
+    "description": "Photo upload section label on wizard step 1"
+  },
+  "createRequestStep1PhotoHint": "Photos help artisans give accurate quotations.",
+  "@createRequestStep1PhotoHint": {
+    "description": "Photo upload helper text on wizard step 1"
+  },
+  "createRequestStep1TakePhoto": "Take photo",
+  "@createRequestStep1TakePhoto": {
+    "description": "Take photo button label"
+  },
+  "createRequestStep1ChooseGallery": "Choose from gallery",
+  "@createRequestStep1ChooseGallery": {
+    "description": "Choose from gallery button label"
+  },
+  "createRequestStep1UrgencyLabel": "How urgent is this?",
+  "@createRequestStep1UrgencyLabel": {
+    "description": "Urgency section label on wizard step 1"
+  },
+  "createRequestStep1UrgencyLow": "Low",
+  "@createRequestStep1UrgencyLow": {
+    "description": "Low urgency label"
+  },
+  "createRequestStep1UrgencyLowDesc": "Within a week",
+  "@createRequestStep1UrgencyLowDesc": {
+    "description": "Low urgency description"
+  },
+  "createRequestStep1UrgencyMedium": "Medium",
+  "@createRequestStep1UrgencyMedium": {
+    "description": "Medium urgency label"
+  },
+  "createRequestStep1UrgencyMediumDesc": "Within 2-3 days",
+  "@createRequestStep1UrgencyMediumDesc": {
+    "description": "Medium urgency description"
+  },
+  "createRequestStep1UrgencyHigh": "High",
+  "@createRequestStep1UrgencyHigh": {
+    "description": "High urgency label"
+  },
+  "createRequestStep1UrgencyHighDesc": "Within 24 hours",
+  "@createRequestStep1UrgencyHighDesc": {
+    "description": "High urgency description"
+  },
+  "createRequestStep1AiTitle": "AI-Assisted Matching",
+  "@createRequestStep1AiTitle": {
+    "description": "AI assist card title"
+  },
+  "createRequestTitle": "Create Request",
+  "@createRequestTitle": {
+    "description": "App bar title for the create request wizard"
+  },
+  "createRequestStepLabel": "Step {current} of {total}",
+  "@createRequestStepLabel": {
+    "description": "Progress step caption in the wizard",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "createRequestContinue": "Continue",
+  "@createRequestContinue": {
+    "description": "Continue button on wizard steps"
+  },
+  "createRequestSubmit": "Submit Request",
+  "@createRequestSubmit": {
+    "description": "Submit button on the final wizard step"
+  },
+  "createRequestStep1Heading": "Describe what you need done",
+  "@createRequestStep1Heading": {
+    "description": "Heading on wizard step 1"
+  },
+  "createRequestStep1DescriptionHint": "Tell us about the job. Include details like what's broken, where it is, and any other context.",
+  "@createRequestStep1DescriptionHint": {
+    "description": "Placeholder for the description field on wizard step 1"
+  },
+  "createRequestStep1PhotoLabel": "Add photos (optional)",
+  "@createRequestStep1PhotoLabel": {
+    "description": "Photo upload section label on wizard step 1"
+  },
+  "createRequestStep1PhotoHint": "Photos help artisans give accurate quotations.",
+  "@createRequestStep1PhotoHint": {
+    "description": "Photo upload helper text on wizard step 1"
+  },
+  "createRequestStep1TakePhoto": "Take photo",
+  "@createRequestStep1TakePhoto": {
+    "description": "Take photo button label"
+  },
+  "createRequestStep1ChooseGallery": "Choose from gallery",
+  "@createRequestStep1ChooseGallery": {
+    "description": "Choose from gallery button label"
+  },
+  "createRequestStep1UrgencyLabel": "How urgent is this?",
+  "@createRequestStep1UrgencyLabel": {
+    "description": "Urgency section label on wizard step 1"
+  },
+  "createRequestStep1UrgencyLow": "Low",
+  "@createRequestStep1UrgencyLow": {
+    "description": "Low urgency label"
+  },
+  "createRequestStep1UrgencyLowDesc": "Within a week",
+  "@createRequestStep1UrgencyLowDesc": {
+    "description": "Low urgency description"
+  },
+  "createRequestStep1UrgencyMedium": "Medium",
+  "@createRequestStep1UrgencyMedium": {
+    "description": "Medium urgency label"
+  },
+  "createRequestStep1UrgencyMediumDesc": "Within 2-3 days",
+  "@createRequestStep1UrgencyMediumDesc": {
+    "description": "Medium urgency description"
+  },
+  "createRequestStep1UrgencyHigh": "High",
+  "@createRequestStep1UrgencyHigh": {
+    "description": "High urgency label"
+  },
+  "createRequestStep1UrgencyHighDesc": "Within 24 hours",
+  "@createRequestStep1UrgencyHighDesc": {
+    "description": "High urgency description"
+  },
+  "createRequestStep1AiTitle": "AI-Assisted Matching",
+  "@createRequestStep1AiTitle": {
+    "description": "AI assist card title"
+  },
+  "createRequestStep1AiDescription": "Let AI analyze your request and recommend artisans best suited to your job. You can still browse and choose manually.",
+  "@createRequestStep1AiDescription": {
+    "description": "AI assist card description"
+  },
+  "createRequestStep3Heading": "When would you like this done?",
+  "@createRequestStep3Heading": {
+    "description": "Heading on wizard step 3"
+  },
+  "createRequestStep3Subheading": "Choose a preferred time window. The artisan will confirm a specific time with you.",
+  "@createRequestStep3Subheading": {
+    "description": "Subheading on wizard step 3"
+  },
+  "createRequestStep3SelectDate": "Select date",
+  "@createRequestStep3SelectDate": {
+    "description": "Date picker section label"
+  },
+  "createRequestStep3SelectedDate": "Selected: {date}",
+  "@createRequestStep3SelectedDate": {
+    "description": "Confirmation line showing the selected date",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "createRequestStep3TimeWindowLabel": "Preferred time window",
+  "@createRequestStep3TimeWindowLabel": {
+    "description": "Time window section label"
+  },
+  "createRequestStep3EarliestLabel": "Earliest",
+  "@createRequestStep3EarliestLabel": {
+    "description": "Earliest time field label"
+  },
+  "createRequestStep3LatestLabel": "Latest",
+  "@createRequestStep3LatestLabel": {
+    "description": "Latest time field label"
+  },
+  "createRequestStep3FlexibleTitle": "I'm flexible",
+  "@createRequestStep3FlexibleTitle": {
+    "description": "Flexible toggle title"
+  },
+  "createRequestStep3FlexibleDescription": "The artisan will propose a time that works for both of you.",
+  "@createRequestStep3FlexibleDescription": {
+    "description": "Flexible toggle description"
+  },
+  "createRequestStep3NotesLabel": "Additional notes (optional)",
+  "@createRequestStep3NotesLabel": {
+    "description": "Additional notes section label"
+  },
+  "createRequestStep3NotesHint": "Any special instructions?",
+  "@createRequestStep3NotesHint": {
+    "description": "Additional notes placeholder"
+  },
+  "createRequestStep2Heading": "Where do you need the service?",
+  "@createRequestStep2Heading": {
+    "description": "Heading on wizard step 2"
+  },
+  "createRequestStep2Subheading": "We'll use this to find artisans in your area.",
+  "@createRequestStep2Subheading": {
+    "description": "Subheading on wizard step 2"
+  },
+  "createRequestStep2SearchHint": "Search for an address or landmark",
+  "@createRequestStep2SearchHint": {
+    "description": "Placeholder for the address search field"
+  },
+  "createRequestStep2PinActive": "Address set",
+  "@createRequestStep2PinActive": {
+    "description": "Label under the map pin when an address is entered"
+  },
+  "createRequestStep2PinInactive": "Enter an address",
+  "@createRequestStep2PinInactive": {
+    "description": "Label under the map pin when no address is entered"
+  },
+  "createRequestStep2MapPlaceholder": "Map preview available in the next release",
+  "@createRequestStep2MapPlaceholder": {
+    "description": "Caption shown in the map placeholder"
+  },
+  "createRequestStep2ConfirmedTitle": "Confirmed location",
+  "@createRequestStep2ConfirmedTitle": {
+    "description": "Title of the address confirmation card"
+  },
+  "createRequestStep4Heading": "Review your request",
+  "@createRequestStep4Heading": {
+    "description": "Heading on wizard step 4"
+  },
+  "createRequestStep4Subheading": "Check the details below. You can edit any section before submitting.",
+  "@createRequestStep4Subheading": {
+    "description": "Subheading on wizard step 4"
+  },
+  "createRequestStep4JobLabel": "Job",
+  "@createRequestStep4JobLabel": {
+    "description": "Job section label on review"
+  },
+  "createRequestStep4LocationLabel": "Location",
+  "@createRequestStep4LocationLabel": {
+    "description": "Location section label on review"
+  },
+  "createRequestStep4LocationMissing": "No location set",
+  "@createRequestStep4LocationMissing": {
+    "description": "Fallback text when no location is present"
+  },
+  "createRequestStep4ScheduleLabel": "Schedule",
+  "@createRequestStep4ScheduleLabel": {
+    "description": "Schedule section label on review"
+  },
+  "createRequestStep4ScheduleFlexible": "Flexible scheduling",
+  "@createRequestStep4ScheduleFlexible": {
+    "description": "Schedule headline when the user is flexible"
+  },
+  "createRequestStep4ScheduleMissing": "No schedule set",
+  "@createRequestStep4ScheduleMissing": {
+    "description": "Fallback text when no schedule is present"
+  },
+  "createRequestStep4PreferredWindow": "Preferred window",
+  "@createRequestStep4PreferredWindow": {
+    "description": "Label before the time window"
+  },
+  "createRequestStep4AiLabel": "AI-Assisted Matching",
+  "@createRequestStep4AiLabel": {
+    "description": "AI section label on review"
+  },
+  "createRequestStep4AiEnabled": "Enabled — We'll recommend artisans after submission.",
+  "@createRequestStep4AiEnabled": {
+    "description": "AI enabled status text"
+  },
+  "createRequestStep4AiDisabled": "Disabled — Manual artisan selection",
+  "@createRequestStep4AiDisabled": {
+    "description": "AI disabled status text"
+  },
+  "createRequestStep4AiOn": "ON",
+  "@createRequestStep4AiOn": {
+    "description": "AI ON pill"
+  },
+  "createRequestStep4AiOff": "OFF",
+  "@createRequestStep4AiOff": {
+    "description": "AI OFF pill"
+  },
+  "createRequestStep4LegalNote": "By submitting, you agree to receive quotations from verified artisans.",
+  "@createRequestStep4LegalNote": {
+    "description": "Legal note on review screen"
+  },
+  "createRequestSuccessTitle": "Request Submitted",
+  "@createRequestSuccessTitle": {
+    "description": "Success screen title"
+  },
+  "createRequestSuccessBodyNoAi": "Your request is now visible to verified artisans near your location. You'll start receiving quotations shortly.",
+  "@createRequestSuccessBodyNoAi": {
+    "description": "Success body when AI assist is off"
+  },
+  "createRequestSuccessBodyAi": "AI is analyzing your request and finding the best artisans for your job. You'll see recommendations in a moment.",
+  "@createRequestSuccessBodyAi": {
+    "description": "Success body when AI assist is on"
+  },
+  "createRequestSuccessAnalyzing": "Analyzing",
+  "@createRequestSuccessAnalyzing": {
+    "description": "Analyzing indicator label"
+  },
+  "createRequestSuccessSeeArtisans": "See Recommended Artisans",
+  "@createRequestSuccessSeeArtisans": {
+    "description": "Primary CTA for AI ON success"
+  },
+  "createRequestSuccessViewRequest": "View Request",
+  "@createRequestSuccessViewRequest": {
+    "description": "View request CTA"
+  },
+  "createRequestSuccessBackHome": "Back to Home",
+  "@createRequestSuccessBackHome": {
+    "description": "Back to home link"
+  },
+  "createRequestSuccessComingSoon": "Request tracking is coming in the next release.",
+  "@createRequestSuccessComingSoon": {
+    "description": "Placeholder snackbar text"
+  },
+  "artisanSelectionTitle": "Choose an Artisan",
+  "artisanSelectionBreadcrumbService": "Plumbing",
+  "artisanSortTopRated": "Top rated",
+  "artisanSortNearest": "Nearest",
+  "artisanSortMostExperienced": "Most experienced",
+  "artisanFilterVerifiedOnly": "Verified only",
+  "artisanReviewsSuffix": "reviews",
+  "artisanChipRespondsFast": "Responds fast",
+  "artisanProfileAbout": "About",
+  "artisanProfileAvailability": "Availability",
+  "artisanProfilePrice": "Price",
+  "artisanProfilePriceNote": "Quotation-based. You'll receive a detailed quote after the artisan reviews your request.",
+  "artisanProfileSelect": "Select This Artisan",
+  "artisanProfileBackToList": "Back to list",
+  "artisanSelectionEmptyTitle": "No artisans available",
+  "artisanSelectionEmptyBody": "We couldn't find any verified artisans for this request right now.",
+  "artisanSelectionEmptyBack": "Back",
+  "selectionConfirmationTitle": "Send request to {name}?",
+  "@selectionConfirmationTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionConfirmationBody": "The artisan will receive your request and can accept or decline. If they accept, they'll send you a detailed quotation.",
+  "selectionConfirmationRequestLabel": "Request",
+  "selectionConfirmationDateLabel": "Preferred date",
+  "selectionConfirmationSend": "Send Request",
+  "selectionConfirmationCancel": "Cancel",
+  "requestSentTitle": "Request sent",
+  "requestSentBody": "{name} has been notified. They'll review your request and respond shortly.",
+  "@requestSentBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "requestSentBackHome": "Back to Home",
+  "requestSentViewRequest": "View Request",
+  "artisanSelectionTitle": "Choose an Artisan",
+  "@artisanSelectionTitle": {
+    "description": "Title of the artisan selection screen"
+  },
+  "artisanSelectionBreadcrumbService": "Plumbing",
+  "@artisanSelectionBreadcrumbService": {
+    "description": "Service name shown in the artisan selection breadcrumb"
+  },
+  "artisanSortTopRated": "Top rated",
+  "@artisanSortTopRated": {
+    "description": "Sort chip: highest rating first"
+  },
+  "artisanSortNearest": "Nearest",
+  "@artisanSortNearest": {
+    "description": "Sort chip: closest first"
+  },
+  "artisanSortMostExperienced": "Most experienced",
+  "@artisanSortMostExperienced": {
+    "description": "Sort chip: most years of experience first"
+  },
+  "artisanFilterVerifiedOnly": "Verified only",
+  "@artisanFilterVerifiedOnly": {
+    "description": "Filter chip: show only verified artisans"
+  },
+  "artisanReviewsSuffix": "reviews",
+  "@artisanReviewsSuffix": {
+    "description": "Suffix after the review count, e.g. 42 reviews"
+  },
+  "artisanChipRespondsFast": "Responds fast",
+  "@artisanChipRespondsFast": {
+    "description": "Chip shown when the artisan's response rate is high"
+  },
+  "artisanProfileAbout": "About",
+  "@artisanProfileAbout": {
+    "description": "Section heading on the artisan profile"
+  },
+  "artisanProfileAvailability": "Availability",
+  "@artisanProfileAvailability": {
+    "description": "Section heading on the artisan profile"
+  },
+  "artisanProfilePrice": "Price",
+  "@artisanProfilePrice": {
+    "description": "Section heading on the artisan profile"
+  },
+  "artisanProfilePriceNote": "Quotation-based. You'll receive a detailed quote after the artisan reviews your request.",
+  "@artisanProfilePriceNote": {
+    "description": "Explains the quotation-based pricing model"
+  },
+  "artisanProfileSelect": "Select This Artisan",
+  "@artisanProfileSelect": {
+    "description": "Primary CTA on the artisan profile"
+  },
+  "artisanProfileBackToList": "Back to list",
+  "@artisanProfileBackToList": {
+    "description": "Secondary action on the artisan profile"
+  },
+  "artisanSelectionEmptyTitle": "No artisans available",
+  "@artisanSelectionEmptyTitle": {
+    "description": "Empty state title when no artisans match"
+  },
+  "artisanSelectionEmptyBody": "We couldn't find any verified artisans for this request right now.",
+  "@artisanSelectionEmptyBody": {
+    "description": "Empty state body when no artisans match"
+  },
+  "artisanSelectionEmptyBack": "Back",
+  "@artisanSelectionEmptyBack": {
+    "description": "Empty state back button"
+  },
+  "selectionConfirmationTitle": "Send request to {name}?",
+  "@selectionConfirmationTitle": {
+    "description": "Confirmation sheet title with artisan name",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionConfirmationBody": "The artisan will receive your request and can accept or decline. If they accept, they'll send you a detailed quotation.",
+  "@selectionConfirmationBody": {
+    "description": "Confirmation sheet body text"
+  },
+  "selectionConfirmationRequestLabel": "Request",
+  "@selectionConfirmationRequestLabel": {
+    "description": "Label in the confirmation sheet reference card"
+  },
+  "selectionConfirmationDateLabel": "Preferred date",
+  "@selectionConfirmationDateLabel": {
+    "description": "Label in the confirmation sheet reference card"
+  },
+  "selectionConfirmationSend": "Send Request",
+  "@selectionConfirmationSend": {
+    "description": "Primary CTA in the confirmation sheet"
+  },
+  "selectionConfirmationCancel": "Cancel",
+  "@selectionConfirmationCancel": {
+    "description": "Cancel button in the confirmation sheet"
+  },
+  "requestSentTitle": "Request sent",
+  "@requestSentTitle": {
+    "description": "Title of the request sent page"
+  },
+  "requestSentBody": "{name} has been notified. They'll review your request and respond shortly.",
+  "@requestSentBody": {
+    "description": "Body text on the request sent page",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "requestSentBackHome": "Back to Home",
+  "@requestSentBackHome": {
+    "description": "Return to customer home"
+  },
+  "requestSentViewRequest": "View Request",
+  "@requestSentViewRequest": {
+    "description": "View the request tracking screen"
+  },
+  "createRequestSuccessBrowseArtisans": "Browse Artisans",
+  "aiUnderstandTitle": "Improve with AI",
+  "aiUnderstandDescription": "Optional. AI can suggest the problem type, urgency, and useful details. You always decide what to keep.",
+  "aiUnderstandButton": "Improve with AI",
+  "aiUnderstandLoading": "Analyzing your description…",
+  "aiProblemTypeLabel": "Problem type",
+  "aiUrgencyLabel": "Urgency",
+  "aiUsefulContextLabel": "Useful context",
+  "aiMissingInfoLabel": "Consider adding",
+  "aiUseSuggestion": "Use this",
+  "aiDismiss": "Dismiss",
+  "aiAdvisoryDisclaimer": "AI suggestions are advisory. You can edit or ignore them.",
+  "aiUnavailableMessage": "AI assistance is currently unavailable. You can continue manually.",
+  "aiLowConfidenceMessage": "AI couldn't confidently interpret this description. You can continue manually.",
+  "aiQuotationTitle": "Analyze Quotation",
+  "aiQuotationDescription": "Optional. AI can flag unusual pricing and highlight missing details. You decide whether to accept or reject.",
+  "aiQuotationAnalyzeButton": "Analyze Quotation",
+  "aiQuotationLoading": "Analyzing the quotation…",
+  "aiQuotationFlagged": "Some details look unusual",
+  "aiQuotationLooksTypical": "No unusual patterns detected",
+  "aiQuotationNoQuote": "There is no quotation to analyze yet.",
+  "aiQuotationConfidence": "Confidence: {score}%",
+  "@aiQuotationConfidence": {
+    "placeholders": {
+      "score": {
+        "type": "int"
+      }
+    }
+  },
+  "createRequestStep1PhotoCount": "{current} of {max} photos",
+  "@createRequestStep1PhotoCount": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "createRequestStep1PhotoLimitReached": "You can add up to {max} photos.",
+  "@createRequestStep1PhotoLimitReached": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "createRequestStep1CameraDenied": "Camera access is off. Enable it in your device settings to take photos.",
+  "createRequestStep1GalleryDenied": "Photo access is off. Enable it in your device settings to choose photos.",
+  "createRequestStep1PhotoPickFailed": "We couldn't add that photo. Please try again.",
+  "createRequestStep2UseCurrentLocation": "Use my current location",
+  "createRequestStep2Or": "or",
+  "createRequestStep2ApproximateTitle": "Address entered",
+  "createRequestStep2LocationUnavailable": "We couldn't get your location right now. You can still type your address manually.",
+  "createRequestStep2SuggestionUse": "Use this address",
+  "createRequestStep2SuggestionDismiss": "Dismiss",
+  "trackingCancelDialogTitle": "Cancel this request?",
+  "trackingCancelDialogBody": "This cannot be undone. No work will be performed. If funds were held, they will be refunded according to the platform workflow.",
+  "trackingCancelReasonHint": "Reason for cancelling (required)",
+  "trackingCancelReasonRequired": "Please provide a reason.",
+  "trackingCancelConfirm": "Cancel request",
+  "trackingCancelFailed": "Could not cancel the request. Please try again.",
+  "commonKeepIt": "Keep it",
+  "trackingCancelDialogTitle": "Cancel this request?",
+  "trackingCancelDialogBody": "This cannot be undone. No work will be performed. If funds were held, they will be refunded according to the platform workflow.",
+  "trackingCancelReasonHint": "Reason for cancelling (required)",
+  "trackingCancelReasonRequired": "Please provide a reason.",
+  "trackingCancelConfirm": "Cancel request",
+  "trackingCancelFailed": "Could not cancel the request. Please try again.",
+  "commonKeepIt": "Keep it",
+  "mapTitle": "Artisans nearby",
+  "mapSearchHint": "Search artisans or services",
+  "mapFilterAll": "All",
+  "mapWithinKm": "Within 5 km",
+  "mapArtisanCount": "{count, plural, =0{No artisans} =1{1 artisan} other{{count} artisans}} nearby",
+  "@mapArtisanCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapSeeAll": "See all",
+  "mapViewProfile": "View profile",
+  "mapMessage": "Message",
+  "mapVerified": "VERIFIED",
+  "mapKmAway": "{km} km away",
+  "@mapKmAway": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "mapEmptyTitle": "No artisans here yet",
+  "mapEmptyBody": "Try panning the map or changing your filter.",
+  "mapResetFilters": "Reset filters",
+  "mapJobsCount": "({count} jobs)",
+  "@mapJobsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapRecenter": "Recenter on me",
+  "mapListView": "List view"
+}

@@ -1,0 +1,137 @@
+ServiceHUB Request Tracking Backend Source Map
+Refreshed: 2026-10-02
+
+This replaces the obsolete raw source concatenation. It names the live files,
+their responsibilities, the API contract, and the permitted transitions so a
+developer can navigate the current implementation without relying on stale code.
+
+CURRENT REQUEST TRACKING FLOW
+
+Customer creates request
+  -> ServiceRequestLifecycleService::submitNewRequest
+  -> awaiting_artisan_selection OR no_artisan_available
+  -> customer selects one deterministic-eligible artisan
+  -> pending_artisan_response
+  -> selected artisan approves OR declines OR response expires
+  -> artisan_approved OR back to awaiting_artisan_selection
+  -> optional inspection / quotation / payment / booking / work / confirmation
+
+CORE SOURCE FILES
+
+1. app/Enums/ServiceRequestStatus.php
+   Wire status values. Existing cases are preserved, including legacy
+   artisan_selected. Do not rename values without migrating persisted documents.
+
+2. app/Models/ServiceRequest.php
+   MongoDB model. Important fields:
+   customer_id, service_id, description, location, preferred_schedule,
+   status, selected_artisan_id, pending_since, matching_attempts,
+   no_artisan_reason, selection_history, status_history, quotation, materials,
+   completion, recommendation, ai_assist_enabled, urgency, cancellation.
+   `images` remains hidden while `image_attachments` exposes safe metadata.
+
+3. app/Services/Artisan/ArtisanMatchingService.php
+   Deterministic matching. Eligibility requires verified artisan profile,
+   active user account, active service offering matching service_id, location
+   coverage, and availability. It must not call AI.
+
+4. app/Services/ServiceRequest/ServiceRequestLifecycleService.php
+   Central selection/recovery state machine:
+   submitNewRequest, selectArtisan, artisanApproves, artisanDeclines,
+   customerChangesArtisan, timeoutPendingResponse, retryMatching,
+   updateRecoveryDetails, cancelByCustomer.
+   It appends status_history and selection_history instead of deleting history.
+
+5. app/Services/ServiceRequestService.php
+   Downstream workflow: inspection, quotation, materials, start, completion,
+   payment verification -> booked. It delegates initial selection/recovery work
+   to ServiceRequestLifecycleService.
+
+6. app/Services/ServiceRequest/ServiceRequestTrackingService.php
+   Preferred customer tracking read-model. Projects safe request/artisan data,
+   a timeline, action permissions, next_action and a server-calculated
+   pending_response.expires_at timestamp.
+
+7. app/Http/Controllers/Api/ServiceRequestController.php
+   Customer request HTTP endpoints, geocoding, image download authorization,
+   tracking projection, controlled update/cancel, eligible artisan projection,
+   quotation/payment/completion calls.
+
+8. app/Http/Controllers/Api/ArtisanRequestController.php
+   Artisan request list/detail and selected-artisan-only response, quotation,
+   materials, inspection, start and completion actions. Requests selected for
+   a different artisan must be concealed as 404.
+
+9. app/Console/Commands/ExpireArtisanResponses.php
+   Finds expired pending artisan responses using platform setting
+   artisan_response_timeout_hours (default 24) and invokes lifecycle timeout.
+
+10. routes/api.php and routes/console.php
+    HTTP registration and scheduler registration. These are the current route
+    and scheduled-command source evidence.
+
+CUSTOMER ROUTES FOR TRACKING
+
+GET   /api/customer/service-requests/{id}
+GET   /api/customer/service-requests/{id}/tracking
+PATCH /api/customer/service-requests/{id}
+POST  /api/customer/service-requests/{id}/cancel
+GET   /api/customer/service-requests/{id}/eligible-artisans
+POST  /api/customer/service-requests/{id}/select-artisan
+POST  /api/customer/service-requests/{id}/change-artisan
+POST  /api/customer/service-requests/{id}/retry-matching
+POST  /api/customer/service-requests/{id}/inspection
+POST  /api/customer/service-requests/{id}/quotation/accept
+POST  /api/customer/service-requests/{id}/quotation/reject
+POST  /api/customer/service-requests/{id}/materials/approve
+POST  /api/customer/service-requests/{id}/payments
+POST  /api/customer/service-requests/{id}/completion/confirm
+GET   /api/customer/service-requests/{id}/conversation
+
+TRACKING CONTRACT
+
+GET /tracking returns:
+- service_request: safe request fields, service, location, schedule, quotation,
+  inspection, materials, completion, cancellation and timestamps
+- selected_artisan: non-sensitive identity/reputation/profile summary
+- pending_response: pending_since, expires_at, is_expired when applicable
+- next_action: server-selected key and label appropriate to current state
+- permissions: booleans such as can_select_artisan, can_change_artisan,
+  can_retry_matching, can_edit_request, can_cancel_request,
+  can_schedule_inspection, can_accept_quotation, can_confirm_completion
+- timeline: sanitized state history suitable for customer rendering
+
+BUSINESS BOUNDARIES
+
+- New requests do not broadcast to all artisans.
+- Selection and reassignment remain customer-controlled until quotation
+  acceptance. Reassignment after that requires controlled payment/dispute work.
+- `no_artisan_available` is recoverable. Retry/update must not delete history.
+- Cancellation is direct only through quotation receipt. Post-acceptance
+  cancellation requires payment support or dispute handling.
+- Frontends must use quotation/XAF language. Do not introduce hourly pricing.
+- AI ranking is optional/advisory and cannot assign an artisan or block matching.
+- File paths, payout details, verification documents, credentials and payment
+  secrets must never be returned to Flutter.
+
+RELATED TESTS
+
+tests/Feature/ServiceRequestLifecycleTest.php
+tests/Feature/ConcurrentArtisanSelectionTest.php
+tests/Feature/ServiceRequestTest.php
+tests/Feature/InspectionAndQuotationTest.php
+tests/Feature/MaterialsApprovalTest.php
+tests/Feature/PaymentInitiationTest.php
+tests/Feature/PaymentIdempotencyTest.php
+tests/Feature/CompletionPayoutTest.php
+tests/Feature/ConversationTest.php
+tests/Feature/DisputeTest.php
+
+FRONTEND ALIGNMENT
+
+The active Flutter tracking screen currently uses the general request detail
+endpoint and status-specific widgets. A separate unreferenced MVVM layer uses
+the normalized /tracking endpoint. Before extending tracking further, choose
+one contract and remove the duplicate implementation. The recommended path is
+to migrate the active views to /tracking because it centralizes timeout and
+permission decisions on the server.

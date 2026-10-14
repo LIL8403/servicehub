@@ -1,0 +1,144 @@
+ServiceHUB API Route Snapshot
+Generated from: php artisan route:list --path=api
+Generated on: 2026-10-02
+
+This is a readable grouped snapshot. Live route registration in routes/api.php
+is the current implementation reference; regenerate this file after route work.
+
+PUBLIC
+GET|HEAD  /api/service-categories
+GET|HEAD  /api/services
+GET|HEAD  /api/artisans
+POST      /api/webhooks/campay
+
+AUTH (throttle:auth unless noted)
+POST      /api/auth/register/customer
+POST      /api/auth/register/artisan
+POST      /api/auth/login
+POST      /api/auth/forgot-password
+POST      /api/auth/reset-password
+POST      /api/auth/logout                         auth, active
+GET|HEAD  /api/auth/me                             auth, active
+PUT       /api/auth/password                       auth, active
+
+IDENTITY / EMAIL
+GET|HEAD  /api/user                                auth, active
+GET|HEAD  /api/user/roles                          auth, active
+POST      /api/user/switch-role                    auth, active
+POST      /api/user/become-artisan                 auth, active
+GET|HEAD  /api/user/notifications                  auth, active
+PATCH     /api/user/notifications/{notification}/read auth, active
+GET|HEAD  /api/users/{user}/photo                  auth, active
+GET|HEAD  /api/email/verify                        auth, active
+GET|HEAD  /api/email/verify/{id}/{hash}            auth, active, signed, throttle:6,1
+POST      /api/email/verification-notification     auth, active, throttle:6,1
+
+AI (auth, active, customer, throttle:ai)
+POST      /api/ai/recommend
+POST      /api/ai/service-requests/{serviceRequest}/understand
+
+CUSTOMER PROFILE (auth, active, customer)
+GET|HEAD  /api/customer/profile
+PATCH     /api/customer/profile
+POST      /api/customer/profile/photo
+GET|HEAD  /api/customer/profile/photo
+DELETE    /api/customer/profile/photo
+
+CUSTOMER REQUESTS (auth, active, customer)
+GET|HEAD  /api/customer/service-requests
+POST      /api/customer/service-requests
+GET|HEAD  /api/customer/service-requests/{serviceRequest}
+GET|HEAD  /api/customer/service-requests/{serviceRequest}/tracking
+PATCH     /api/customer/service-requests/{serviceRequest}
+POST      /api/customer/service-requests/{serviceRequest}/cancel
+GET|HEAD  /api/customer/service-requests/{serviceRequest}/images/{imageId}
+GET|HEAD  /api/customer/service-requests/{serviceRequest}/eligible-artisans
+POST      /api/customer/service-requests/{serviceRequest}/select-artisan
+POST      /api/customer/service-requests/{serviceRequest}/change-artisan
+POST      /api/customer/service-requests/{serviceRequest}/retry-matching
+POST      /api/customer/service-requests/{serviceRequest}/inspection
+POST      /api/customer/service-requests/{serviceRequest}/quotation/accept
+POST      /api/customer/service-requests/{serviceRequest}/quotation/reject
+POST      /api/customer/service-requests/{serviceRequest}/materials/approve
+POST      /api/customer/service-requests/{serviceRequest}/completion/confirm
+POST      /api/customer/service-requests/{serviceRequest}/payout/retry
+POST      /api/customer/service-requests/{serviceRequest}/reviews
+POST      /api/customer/service-requests/{serviceRequest}/disputes
+GET|HEAD  /api/customer/service-requests/{serviceRequest}/conversation
+
+CUSTOMER CONVERSATIONS / PAYMENTS / DISPUTES (auth, active, customer)
+GET|HEAD  /api/customer/conversations
+GET|HEAD  /api/customer/conversations/{conversation}/messages
+POST      /api/customer/conversations/{conversation}/messages
+GET|HEAD  /api/customer/conversations/{conversation}/messages/{message}/attachments/{attachmentId}
+GET|HEAD  /api/customer/payments
+POST      /api/customer/service-requests/{serviceRequest}/payments    verified, throttle:payments
+POST      /api/customer/payments/{payment}/reconcile                   throttle:payments
+GET|HEAD  /api/customer/disputes
+POST      /api/customer/disputes/evidence
+POST      /api/customer/disputes/{dispute}/evidence
+
+ARTISAN PROFILE / VERIFICATION (auth, active, artisan)
+GET|HEAD  /api/artisan/profile
+PATCH     /api/artisan/profile                         verified
+GET|HEAD  /api/artisan/verification
+PATCH     /api/artisan/verification/identity
+POST      /api/artisan/verification/identity/document
+POST      /api/artisan/verification/selfie
+POST      /api/artisan/verification/documents
+DELETE    /api/artisan/verification/documents/{documentId}
+POST      /api/artisan/verification/submit
+GET|HEAD  /api/artisan/verification/download/{slot}
+GET|HEAD  /api/artisan/service-offerings
+POST      /api/artisan/service-offerings
+PATCH     /api/artisan/service-offerings/{offeringId}
+DELETE    /api/artisan/service-offerings/{offeringId}
+
+ARTISAN REQUESTS / CONVERSATIONS / DISPUTES (auth, active, artisan)
+GET|HEAD  /api/artisan/service-requests
+GET|HEAD  /api/artisan/service-requests/{serviceRequest}
+POST      /api/artisan/service-requests/{serviceRequest}/approve
+POST      /api/artisan/service-requests/{serviceRequest}/decline
+POST      /api/artisan/service-requests/{serviceRequest}/inspection/complete
+GET|HEAD  /api/artisan/service-requests/{serviceRequest}/images/{imageId}
+POST      /api/artisan/service-requests/{serviceRequest}/quotation
+POST      /api/artisan/service-requests/{serviceRequest}/materials
+POST      /api/artisan/service-requests/{serviceRequest}/start
+POST      /api/artisan/service-requests/{serviceRequest}/completion
+GET|HEAD  /api/artisan/service-requests/{serviceRequest}/conversation
+GET|HEAD  /api/artisan/conversations/{conversation}/messages
+POST      /api/artisan/conversations/{conversation}/messages
+GET|HEAD  /api/artisan/conversations/{conversation}/messages/{message}/attachments/{attachmentId}
+GET|HEAD  /api/artisan/disputes
+POST      /api/artisan/service-requests/{serviceRequest}/disputes
+POST      /api/artisan/disputes/{dispute}/evidence
+
+ADMIN (auth, active; exact permission shown after semicolon)
+GET|HEAD  /api/admin/artisans/pending                            ; view-artisan-applications
+POST      /api/admin/artisans/{artisan}/approve                  ; approve-artisan, throttle:verification
+POST      /api/admin/artisans/{artisan}/reject                   ; reject-artisan, throttle:verification
+GET|HEAD  /api/admin/users                                       ; manage-users
+PATCH     /api/admin/users/{user}/status                         ; manage-users
+GET|HEAD  /api/admin/dashboard                                   ; manage-reports
+GET|HEAD  /api/admin/payments                                    ; manage-reports
+GET|HEAD  /api/admin/payouts                                     ; manage-reports
+GET|HEAD  /api/admin/audit-logs                                  ; manage-reports
+GET|HEAD  /api/admin/service-categories                          ; manage-services
+POST      /api/admin/service-categories                          ; manage-services
+PUT|PATCH /api/admin/service-categories/{service_category}      ; manage-services
+DELETE    /api/admin/service-categories/{service_category}      ; manage-services
+GET|HEAD  /api/admin/services                                    ; manage-services
+POST      /api/admin/services                                    ; manage-services
+PUT|PATCH /api/admin/services/{service}                          ; manage-services
+DELETE    /api/admin/services/{service}                          ; manage-services
+GET|HEAD  /api/admin/disputes                                    ; manage-disputes
+GET|HEAD  /api/admin/disputes/{dispute}                          ; manage-disputes
+POST      /api/admin/disputes/{dispute}/review                   ; manage-disputes
+POST      /api/admin/disputes/{dispute}/awaiting-information     ; manage-disputes
+POST      /api/admin/disputes/{dispute}/investigate              ; manage-disputes
+POST      /api/admin/disputes/{dispute}/resolve                  ; manage-disputes
+POST      /api/admin/disputes/{dispute}/confirm-resolution       ; manage-disputes
+POST      /api/admin/disputes/{dispute}/cancel-resolution        ; manage-disputes
+POST      /api/admin/disputes/{dispute}/reconcile                ; manage-disputes
+GET|HEAD  /api/admin/settings/commission                         ; manage-platform-settings
+PUT       /api/admin/settings/commission                         ; manage-platform-settings

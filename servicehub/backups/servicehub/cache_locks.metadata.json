@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"key":{"$numberInt":"1"}},"name":"key_1","unique":true},{"v":{"$numberInt":"2"},"key":{"expiration":{"$numberInt":"1"}},"name":"expiration_1"}],"uuid":"8971dbee312d4ad7ad73910797da2c24","collectionName":"cache_locks","type":"collection"}

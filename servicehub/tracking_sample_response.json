@@ -1,0 +1,181 @@
+﻿{
+    "service_request":  {
+                            "matching_attempts":  1,
+                            "selection_history":  [
+                                                      {
+                                                          "event":  "selected",
+                                                          "artisan_id":  "6abc2d948dca4851610ebde6",
+                                                          "artisan_name":  "Aline Tchoumi",
+                                                          "occurred_at":  "2026-09-30T00:41:54.258000Z",
+                                                          "reason":  null
+                                                      }
+                                                  ],
+                            "ai_assist_enabled":  true,
+                            "customer_id":  "6abc1a0dbfcfaf6dc1004534",
+                            "service_id":  "6abb891c50fb06c2df0a6915",
+                            "description":  "All the bulbs in my house are off",
+                            "location":  {
+                                             "label":  "Yaounde Soa",
+                                             "type":  "Point",
+                                             "coordinates":  [
+                                                                 9.7679,
+                                                                 4.0511
+                                                             ]
+                                         },
+                            "formatted_address":  null,
+                            "preferred_schedule":  {
+                                                       "date":  null,
+                                                       "window":  "Flexible",
+                                                       "notes":  null
+                                                   },
+                            "status":  "pending_artisan_response",
+                            "status_history":  [
+                                                   {
+                                                       "status":  "awaiting_artisan_selection",
+                                                       "occurred_at":  "2026-09-30T00:40:42.083000Z",
+                                                       "actor_id":  "6abc1a0dbfcfaf6dc1004534",
+                                                       "event":  "submitted"
+                                                   },
+                                                   {
+                                                       "status":  "pending_artisan_response",
+                                                       "occurred_at":  "2026-09-30T00:41:54.259000Z",
+                                                       "actor_id":  "6abc1a0dbfcfaf6dc1004534",
+                                                       "event":  "artisan_selected",
+                                                       "artisan_id":  "6abc2d948dca4851610ebde6"
+                                                   }
+                                               ],
+                            "updated_at":  "2026-09-30T00:41:54.260000Z",
+                            "created_at":  "2026-09-30T00:40:42.099000Z",
+                            "no_artisan_reason":  null,
+                            "pending_since":  "2026-09-30T00:41:54.258000Z",
+                            "selected_artisan_id":  "6abc2d948dca4851610ebde6",
+                            "id":  "6abc5a8a6e16fdef780430b3",
+                            "image_attachments":  [
+
+                                                  ],
+                            "service":  {
+                                            "slug":  "electrical",
+                                            "service_category_id":  "6abb891c50fb06c2df0a6914",
+                                            "name":  "Electrical",
+                                            "description":  "Wiring, sockets, repairs",
+                                            "is_active":  true,
+                                            "updated_at":  "2026-09-29T09:47:08.829000Z",
+                                            "created_at":  "2026-09-29T09:47:08.829000Z",
+                                            "id":  "6abb891c50fb06c2df0a6915"
+                                        },
+                            "selected_artisan":  {
+                                                     "certifications":  [
+
+                                                                        ],
+                                                     "languages":  [
+                                                                       "english",
+                                                                       "french"
+                                                                   ],
+                                                     "service_areas":  [
+                                                                           {
+                                                                               "city":  "Douala",
+                                                                               "radius_km":  25
+                                                                           },
+                                                                           {
+                                                                               "city":  "Yaoundé",
+                                                                               "radius_km":  25
+                                                                           }
+                                                                       ],
+                                                     "offered_services":  [
+                                                                              {
+                                                                                  "service_reference":  "6abb891c50fb06c2df0a6915",
+                                                                                  "is_active":  true
+                                                                              }
+                                                                          ],
+                                                     "service_offerings":  [
+                                                                               {
+                                                                                   "service_reference":  "6abb891c50fb06c2df0a6915",
+                                                                                   "is_active":  true
+                                                                               }
+                                                                           ],
+                                                     "availability":  {
+                                                                          "radius_km":  25,
+                                                                          "accepting_requests":  true,
+                                                                          "monday":  [
+                                                                                         {
+                                                                                             "start":  "08:00",
+                                                                                             "end":  "18:00"
+                                                                                         }
+                                                                                     ],
+                                                                          "tuesday":  [
+                                                                                          {
+                                                                                              "start":  "08:00",
+                                                                                              "end":  "18:00"
+                                                                                          }
+                                                                                      ],
+                                                                          "wednesday":  [
+                                                                                            {
+                                                                                                "start":  "08:00",
+                                                                                                "end":  "18:00"
+                                                                                            }
+                                                                                        ],
+                                                                          "thursday":  [
+                                                                                           {
+                                                                                               "start":  "08:00",
+                                                                                               "end":  "18:00"
+                                                                                           }
+                                                                                       ],
+                                                                          "friday":  [
+                                                                                         {
+                                                                                             "start":  "08:00",
+                                                                                             "end":  "18:00"
+                                                                                         }
+                                                                                     ]
+                                                                      },
+                                                     "verification_history":  [
+
+                                                                              ],
+                                                     "rating_average":  4.7,
+                                                     "review_count":  34,
+                                                     "completed_jobs":  62,
+                                                     "response_rate":  0.95,
+                                                     "cancellation_rate":  0.02,
+                                                     "user_id":  "6abc2728ed68ec278604d01a",
+                                                     "professional_title":  "Electrical Technician",
+                                                     "professional_description":  "Specializes in socket installation and circuit breaker repairs.",
+                                                     "bio":  "Specializes in socket installation and circuit breaker repairs.",
+                                                     "experience_years":  6,
+                                                     "verification_status":  "verified",
+                                                     "location":  {
+                                                                      "type":  "Point",
+                                                                      "coordinates":  [
+                                                                                          9.7679,
+                                                                                          4.0511
+                                                                                      ]
+                                                                  },
+                                                     "service_location":  {
+                                                                              "type":  "Point",
+                                                                              "coordinates":  [
+                                                                                                  9.7679,
+                                                                                                  4.0511
+                                                                                              ]
+                                                                          },
+                                                     "updated_at":  "2026-09-29T21:28:52.223000Z",
+                                                     "created_at":  "2026-09-29T21:28:52.223000Z",
+                                                     "id":  "6abc2d948dca4851610ebde6",
+                                                     "user":  {
+                                                                  "account_status":  "active",
+                                                                  "status":  "active",
+                                                                  "roles":  [
+                                                                                "customer",
+                                                                                "artisan"
+                                                                            ],
+                                                                  "email":  "aline.tchoumi@servicehub.cm",
+                                                                  "first_name":  "Aline",
+                                                                  "last_name":  "Tchoumi",
+                                                                  "name":  "Aline Tchoumi",
+                                                                  "phone":  "+237600000105",
+                                                                  "email_verified_at":  "2026-09-29T23:02:23.212000Z",
+                                                                  "active_role":  "artisan",
+                                                                  "updated_at":  "2026-09-29T23:02:23.224000Z",
+                                                                  "created_at":  "2026-09-29T21:01:28.297000Z",
+                                                                  "id":  "6abc2728ed68ec278604d01a"
+                                                              }
+                                                 }
+                        }
+}

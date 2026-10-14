@@ -1,0 +1,21 @@
+<svg fill="none" viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Trust Nexus symbol centered -->
+  <g transform="translate(110, 20)">
+    <path d="M60 60 C50 38, 30 30, 20 40 C8 52, 10 76, 26 84 C40 92, 54 78, 60 60"
+          fill="none" stroke="#152238" stroke-linecap="round" stroke-width="12"/>
+    <path d="M60 60 C70 82, 90 90, 100 80 C112 68, 110 44, 94 36 C80 28, 66 42, 60 60"
+          fill="none" stroke="#B86B3E" stroke-linecap="round" stroke-width="12"/>
+    <circle cx="60" cy="60" fill="#FFFFFF" r="13" stroke="#152238" stroke-width="3"/>
+    <circle cx="60" cy="60" fill="#B86B3E" r="7"/>
+  </g>
+
+  <!-- Wordmark centered -->
+  <text x="170" y="240" text-anchor="middle"
+        font-family="Plus Jakarta Sans, -apple-system, sans-serif"
+        font-size="52" font-weight="700" fill="#152238"
+        letter-spacing="-1.5">Service</text>
+  <text x="170" y="298" text-anchor="middle"
+        font-family="Plus Jakarta Sans, -apple-system, sans-serif"
+        font-size="52" font-weight="800" fill="#B86B3E"
+        letter-spacing="-1.5">HUB</text>
+</svg>
