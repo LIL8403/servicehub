@@ -1,0 +1,28 @@
+# --- Laravel ---
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+.env
+.phpunit.result.cache
+Homestead.yaml
+Homestead.json
+/.vagrant
+
+# --- Flutter ---
+# Flutter/Dart specific
+.dart_tool/
+/.packages
+.pub/
+/build/
+/ios/Pods/
+/android/.gradle/
+/android/app/build/
+/android/local.properties
+
+# IDE files
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
